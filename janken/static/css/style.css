@@ -1,0 +1,31 @@
+.jumbotron-container {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.jumbotron-extend {
+    position: relative;
+    height: 100vh;
+    min-height: 300px;
+}
+
+.padd {
+    background-color: white;
+    display: inline-block;
+}
+
+#interval{
+    padding-top: 10px;
+}
+
+#jankenh {
+    font-family: 'Bangers', cursive;
+    font-size: 4em;
+}
+
+.word1{
+    font-size: 25px;
+}
+
+
