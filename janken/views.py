@@ -12,9 +12,6 @@ class RankingListView(ListView):
     template_name = 'janken/ranking.html'
     queryset = Janken.objects.order_by('-win')
     
-def top(request):
-    return render(request, "janken/top.html")
-
 def result(request):
     return render(request, "janken/result.html")
 
@@ -148,61 +145,6 @@ def janken2(request):
                 "userName":str(user),
             }
             return render(request, "janken/janken2.html",result)
-
-
-    """content={
-        "win":"{}".format(article_id)
-    }
-    enemy=random.randint(0,2)
-    #0グー,1チョキ,2パー
-    try:
-        g=request.POST["g"]
-    
-    except:
-        try:
-            c=request.POST["c"]
-        
-        except:
-            p=request.POST["p"]
-            if enemy==0:
-                article_id="{}".format(article_id)
-                article_id=int(article_id)
-                article_id+=1
-                return redirect(janken,article_id)
-            
-            elif enemy==1:
-                return redirect(result)
-            
-            else:
-                return redirect(janken,article_id)
-        
-        if enemy==0:
-            return redirect(result)
-        
-        elif enemy==1:
-            return redirect(janken,article_id)
-        
-        else:
-            article_id="{}".format(article_id)
-            article_id=int(article_id)
-            article_id+=1
-            return redirect(janken,article_id)
-    
-    if enemy==0:
-        return redirect(janken,article_id)
-    
-    elif enemy==1:
-        article_id="{}".format(article_id)
-        article_id=int(article_id)
-        article_id+=1
-        return redirect(janken,article_id)
-    
-    else:
-        return redirect(result)"""
-    
-
-def register(request):
-    return render(request, "janken/register.html")
 
 def result2(request):
     name = request.POST["user_name"]
